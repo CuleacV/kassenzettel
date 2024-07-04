@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Bitte den Wert vom 1. input-Feld auslesen
+Bitte den Wert vom 2. input-Feld auslesen
+dann berechnen welches Jahr sich durch die Addition ergibt
+-->
+<p>
+    <label>Jahr: <input type="text" id="jahr" value="2014"></label>
+    <label>hinzuzählen: <input type="text" id="hinzu" value="2">Jahre</label>
+</p>
+<button type="button" onclick="calculateYear()">Jahresberechnung</button>
+<p id="ergebnisJahr"></p>
+
+<script>
+    function calculateYear() {
+        // alte Jahr und neue Jahren
+        const jahr = parseInt(document.getElementById('jahr').value);
+        const hinzu = parseInt(document.getElementById('hinzu').value);
+        // neue Jahr berechnen
+        const newYear = jahr + hinzu;
+        // Ergebnis ausgeben
+        document.getElementById('ergebnisJahr').textContent = 'Das neue Jahr ist: ' + newYear;
+    }
+</script>
+</body>
+</html>
