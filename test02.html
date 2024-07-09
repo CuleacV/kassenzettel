@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = 0;
+    if (x === 3) {
+        console.log(`Ausgabe aus Zeile 10 x hat den Wert ${x}`);
+    } else {
+        console.log(`Ausgabe aus Zeile 10 x hat nicht den Wert ${x}`);
+    }
+
+    // jetzt in Kurzform
+    (x === 3) ? console.log(`Ausgabe aus Zeile 10 x hat den Wert ${x}`) : console.log(`Ausgabe aus Zeile 10 x hat nicht den Wert ${x}`);
+
+    // oder als Zuweisung
+    let ausgabe = (x === 3) ? `Ausgabe aus Zeile 10 x hat den Wert ${x}` : `Ausgabe aus Zeile 10 x hat nicht den Wert ${x}`;
+    console.log(ausgabe);
+</script>
+</body>
+</html>

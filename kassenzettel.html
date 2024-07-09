@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Preisberechnung</title>
+    <script>
+        function berechne() {
+            let anzahl1 = Number(document.querySelector('#anzahl1').value);
+            let einzelpreis1 = Number(document.querySelector('#einzelpreis1').value);
+            document.querySelector('#preis1').value = anzahl1 * einzelpreis1;
+
+            let anzahl2 = Number(document.querySelector('#anzahl2').value);
+            let einzelpreis2 = Number(document.querySelector('#einzelpreis2').value);
+            document.querySelector('#preis2').value = anzahl2 * einzelpreis2;
+
+            // Calculate total sum
+            let summe = (anzahl1 * einzelpreis1) + (anzahl2 * einzelpreis2);
+            document.querySelector('#summe').value = summe.toFixed(2);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Artikel</th>
+        <th>Anzahl</th>
+        <th>Einzelpreis</th>
+        <th>Preis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="text" value="Aubergine"></td>
+        <td><input type="text" id="anzahl1" value="3"></td>
+        <td><input type="text" id="einzelpreis1" value="0.75"></td>
+        <td><input type="text" id="preis1" readonly></td>
+    </tr>
+    <tr>
+        <td><input type="text" value="Zucchini"></td>
+        <td><input type="text" id="anzahl2" value="4"></td>
+        <td><input type="text" id="einzelpreis2" value="0.69"></td>
+        <td><input type="text" id="preis2" readonly></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td>Summe:</td>
+        <td><input type="text" id="summe" readonly></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4" style="text-align: right;"><button onclick="berechne();">Berechne</button></td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

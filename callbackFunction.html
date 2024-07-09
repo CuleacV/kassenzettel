@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>callbackFunction</title>
+</head>
+<body>
+<script>
+    function ask(question, yes, no) {
+        // Если пользователь подтверждает (нажимает "ОК"), вызывается функция yes
+        if (confirm(question)) yes()
+        // В противном случае вызывается функция no
+        else no();
+    }
+
+    function showOk() {
+        console.log("You agreed."); // Логирует сообщение "You agreed."
+    }
+
+    function showCancel() {
+        console.log("You canceled the execution."); // Логирует сообщение "You canceled the execution."
+    }
+
+    ask("Do you agree?", showOk, showCancel);
+
+    // Пример использования: функции showOk и showCancel передаются как аргументы в функцию ask
+    //
+    // let success = confirm('Hast du heute geduscht?');
+    // (success) ? console.log('das hat gedauert.') : console.log('Zeit gespart.');
+
+</script>
+</body>
+</html>

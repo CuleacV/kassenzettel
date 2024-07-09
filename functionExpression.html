@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expression</title>
+</head>
+<body>
+<script>
+
+    function printGermanGrades(number1) {
+        // check, ob es sich beim Argument um eine ganze Zahl im richtigen Bereich handelt
+        if ((Math.floor(number1) === number1) && number1 >= 1 && number1 <= 6) {
+            const grades = ['sehr gut', 'gut', 'befriedigend', 'ausreichend', 'mangelhaft', 'ungenügend'];
+            console.log(grades[number1 - 1]);
+        } else {
+            console.log('falsche Zahl eingegeben');
+        }
+    }
+
+    printGermanGrades(1);
+    // printGermanGrades(0); // erwartet Fehlermeldung
+
+    // Aufgabe: Erstelle eine function expression addiere, die 3 Zahlen addiert und das Ergebnis zurückgibt
+    const addiere = function(a, b, c) {
+        return a + b + c;
+    };
+
+    console.log(addiere(3, 4, 5)); // zum Testen // 12
+
+    // Aufgabe: Erstelle eine Funktion, die den Aggregatzustand von Wasser zurückgibt: gefroren, flüssig oder gasförmig
+    // Der Aggregatzustand ist abhängig von der Temperatur
+    function getWaterState(temperature) {
+        if (temperature <= 0) {
+            return 'gefroren';
+        } else if (temperature > 0 && temperature < 100) {
+            return 'flüssig';
+        } else {
+            return 'gasförmig';
+        }
+    }
+
+    console.log(getWaterState(-5)); // 'gefroren'
+    console.log(getWaterState(25)); // 'flüssig'
+    console.log(getWaterState(110)); // 'gasförmig'
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preisrechner</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Preis</th>
+        <th>Anzahl</th>
+        <th>Produkt</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="preis1" oninput="berechneProdukt1()"></td>
+        <td><input type="number" id="anzahl1" oninput="berechneProdukt1()"></td>
+        <td><input type="text" id="produkt1" readonly></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="preis2" oninput="berechneProdukt2()"></td>
+        <td><input type="number" id="anzahl2" oninput="berechneProdukt2()"></td>
+        <td><input type="text" id="produkt2" readonly></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick="berechnen()">Berechnen</button></td>
+        <td id="summe">Summe:</td>
+    </tr>
+</table>
+<script src="script.js"></script>
+</body>
+</html>
